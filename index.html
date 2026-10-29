@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>body { background:linear-gradient(to right,#ffe0b2,#e1bee7,#b3e5ff);font-family:Arial;text-align:center;padding:30px;} h1 {color:red;-webkit-text-stroke:0.5px black;} h2{color:rgb(62, 100, 0);-webkit-text-stroke:0.5px black;} p{font-size: 18px; color: darkred;}
+         #aboutMe p{ color: #000;} #aboutMe p strong{color: #0d47a1;}
+         #aboutMe{animation: fadein 1s;}
+         @keyframes fadein {from{opacity: 0;} to{opacity: 1;}}
+        </style>
+        <style> .container { max-width:100%; margin:0; padding:0; background:transparent; } img{border-radius:50%;}</style>
+        <style> button{background-color:blue;color: white;padding: 12px 25px;border: none; border-radius:25px;font-size: 16px;cursor: pointer;box-shadow: 0px 4px 10px rgb(0,0,0,0.3);} 
+        button:hover{background-color:darkblue;}
+        .bubble{position: fixed;bottom: -100px;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9),rgba(100,180,255,0.8));border-radius: 50%;animation:rise 6s infinite;}
+        @keyframes rise {from{transform: translateY(0);opacity: 1;}to {transform: translateY(-110vh);opacity: 0;}}
+        </style>
+      </head>
+    <body>
+        <div class="bubble" style="left:10%;width:20px;height: 20px;"></div>
+        <div class="bubble" style="left:30%;width:30px;height: 30px;animation-delay: 2s;"></div>
+        <div class="bubble" style="left:50%;width:15px;height: 15px;animation-delay: 4s;"></div>
+        <div class="bubble" style="left:70%;width:25px;height: 25px;animation-delay: 1s;"></div>
+        <div class="bubble" style="left:90%;width:20px;height: 20px;animation-delay: 3s;"></div>
+        <div class="bubble" style="left:15%;width:30px;height: 30px;animation-delay: 0.5s;"></div>
+        <div class="bubble" style="left:25%;width:40px;height: 40px;animation-delay: 1.5s;"></div>
+        <div class="bubble" style="left:55%;width:15px;height: 15px;animation-delay: 2.5s;"></div>
+        <div class="bubble" style="left:75%;width:30px;height: 30px;animation-delay: 3.5s;"></div>
+        <div class="bubble" style="left:95%;width:40px;height: 40px;animation-delay: 4.5s;"></div>
+        
+
+        <div class="container">
+        <img src="profile.jpg.jpeg" alt="Rounak Banerjee" width="150">
+        <h1>Rounak Banerjee</h1>
+        <h2>Welcome to my Website</h2>
+        <p>Hi I am Rounak Banerjee</p>
+        <p>I am a 1st year CST student </p>
+        <button onclick="showAbout()"> Click Me </button>
+        <div id="aboutMe" style="display: none;">
+            <h2>About Me</h2> 
+            <p><strong>Name:</strong> Rounak Banerjee</p>
+            <p><strong>course:</strong> Computer Science & Technology (CST) </p>
+            <p><strong>College:</strong> Sir Rajendra Nath Mukherjee Government Polytechnic</p>
+            <p><strong>Year:</strong> 1st Year </p>
+            <p><strong>Hobby:</strong> Video Editing </p>
+            <p><strong>Interest:</strong> Gaming & Game Video Creation </p>
+            <p><strong>Skills:</strong> Cinematic Editing </p>
+            <p><strong>Goal:</strong> Learning Coding & Web Development </p> </div>
+    </div>
+    <p id="footer">&copy;2026 Rounak Banerjee <P>Thanks for visiting😊</p>
+    <script> function showAbout(){ var box=document.getElementById("aboutMe"); if(box.style.display==="none"){ box.style.display="block"; document.body.style.background="linear-gradient(to right,#4e342e,#311b92,#1a237e)"; } else { box.style.display="none"; document.body.style.background="linear-gradient(to right,#ffe0b2,#e1bee7,#b3e5ff)"; } } </script>
+    </body>
+    </html>
