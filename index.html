@@ -14,9 +14,13 @@
         button:hover{background-color:darkblue;}
         .bubble{position: fixed;bottom: -100px;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9),rgba(100,180,255,0.8));border-radius: 50%;animation:rise 6s infinite;}
         @keyframes rise {from{transform: translateY(0);opacity: 1;}to {transform: translateY(-110vh);opacity: 0;}}
+        .rabbit{position:fixed;font-size:40px;left:0;bottom:20px;transition:left 0.5s;animation:hop 0.5s infinite;}
+        @keyframes hop{0%,100%{transform: translateY(0);}50%{transform: translateY(-15px);}}
+        
         </style>
       </head>
     <body>
+        <img class="rabbit" src="rabbit.png" width="60">
         <div class="bubble" style="left:10%;width:20px;height: 20px;"></div>
         <div class="bubble" style="left:30%;width:30px;height: 30px;animation-delay: 2s;"></div>
         <div class="bubble" style="left:50%;width:15px;height: 15px;animation-delay: 4s;"></div>
@@ -49,5 +53,12 @@
     </div>
     <p id="footer">&copy;2026 Rounak Banerjee <P>Thanks for visiting😊</p>
     <script> function showAbout(){ var box=document.getElementById("aboutMe"); if(box.style.display==="none"){ box.style.display="block"; document.body.style.background="linear-gradient(to right,#4e342e,#311b92,#1a237e)"; } else { box.style.display="none"; document.body.style.background="linear-gradient(to right,#ffe0b2,#e1bee7,#b3e5ff)"; } } </script>
+    <script>
+    let pos = 0;
+    window.addEventListener('scroll', function() {
+        pos = window.scrollY/10;
+        document.querySelector(".rabbit").style.left = pos + "px";
+    });
+    </script>
     </body>
     </html>
